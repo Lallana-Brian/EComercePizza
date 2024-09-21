@@ -1,0 +1,110 @@
+/* Inicialmente la navbar comenzará más abajo */
+nav {
+    display: flex;
+    justify-content: space-between; /* Alinea el contenido entre el logo y el menú */
+    background-color: rgba(32, 32, 32, 0.7); /* Negro con 70% de opacidad */
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    transition: top 0.3s;
+    left: 0;
+}
+
+/* Estilos para la lista y los enlaces */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Efecto de subrayado en hover */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    background-color: transparent;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+    display: none; /* Ocultar por defecto */
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center; /* Centra las barras */
+    margin-left: auto; /* Alinea a la derecha */
+    margin-right: 30px;
+}
+
+.menu-toggle span {
+    background-color: white;
+    height: 3px;
+    margin: 4px;
+    width: 30px;
+    transition: 0.4s;
+}
+
+/* Menu responsive */
+@media (max-width: 768px) {
+    /* Ocultar lista de enlaces por defecto */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(32, 32, 32, 0.7); /* Negro con 70% de opacidad */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 30px;
+        align-items: center;
+    }
+    
+    nav ul li {
+        text-align: center; /* Alinea los enlaces a la derecha */
+        margin: 10px 0;
+        padding-right: 20px;
+    }
+
+    nav ul li a {
+        padding: 10px;
+    }
+
+    /* Mostrar el botón de hamburguesa */
+    .menu-toggle {
+        display: flex; /* Muestra el botón en móvil */
+    }
+    
+    /* Mostrar el menú al hacer clic en el botón */
+    .nav-open ul {
+        display: flex;
+        justify-content: center; /* Alinea el menú desplegable a la derecha */
+        align-items:center; /* Asegura que todo esté a la derecha */
+    }
+}

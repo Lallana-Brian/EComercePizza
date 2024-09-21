@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzas Congeladas</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <h1></h1>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="nav-links">
+                <li><a href="#">Menú</a></li>
+                <li><a href="#">Carrito</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- Nueva sección para la imagen de fondo -->
+<secction class="hero">
+    <div class="hero-content">
+        <h1 id="hero-title">bienvenidos a Nuestra Pizzeria</h1>
+        <h2 id="hero-subtitle">!las mejores pizzas artesanales congeladas </h2>
+    </div>
+    <div class="hero-carousel">
+        <img id="hero-image" src="imgPizza/Portada.jpeg"    alt="Pizza banner 1">
+    </div>
+
+    <!--Flecha para indicar el scroll-->
+    <div class="scroll-arrow-container">
+    <div class="scroll-arrow"></div>
+</div>
+</secction>
+
+    <main>
+        <h2></h2>
+        <section id="target-section" class="menu">
+            <div class="pizza-card" onclick="abrirModal('modalMargarita')">
+                <h3>Pizza Margarita</h3>
+                <img src="https://via.placeholder.com/150" alt="Pizza Margarita">
+                <p><strong>$10.00</strong></p>
+                <button onclick="agregarAlCarrito('Pizza Margarita', 10)">Comprar</button>
+            </div>
+            <div class="pizza-card" onclick="abrirModal('modalPepperoni')">
+                <h3>Pizza Pepperoni</h3>
+                <img src="https://via.placeholder.com/150" alt="Pizza Pepperoni">
+                <p><strong>$12.00</strong></p>
+                <button onclick="agregarAlCarrito('Pizza Pepperoni', 12)">Comprar</button>
+            </div>
+            <div class="pizza-card" onclick="abrirModal('modalCuatroQuesos')">
+                <h3>Pizza Cuatro Quesos</h3>
+                <img src="https://via.placeholder.com/150" alt="Pizza Cuatro Quesos">
+                <p><strong>$14.00</strong></p>
+                <button onclick="agregarAlCarrito('Pizza Cuatro Quesos', 14)">Comprar</button>
+            </div>
+            <div class="pizza-card" onclick="abrirModal('modalVegetariana')">
+                <h3>Pizza Vegetariana</h3>
+                <img src="https://via.placeholder.com/150" alt="Pizza Vegetariana">
+                <p><strong>$13.00</strong></p>
+                <button onclick="agregarAlCarrito('Pizza Vegetariana', 13)">Comprar</button>
+            </div>
+        </section>
+
+        <section class="carrito">
+            <h2>Carrito de Compras</h2>
+            <ul id="lista-carrito"></ul>
+            <p id="total"></p>
+        </section>
+    </main>
+
+    <!-- Modales de las pizzas -->
+    <div id="modalMargarita" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('modalMargarita')">&times;</span>
+            <h3>Pizza Margarita</h3>
+            <img src="https://via.placeholder.com/300" alt="Pizza Margarita">
+            <p>Tomate, queso mozzarella, y albahaca fresca.</p>
+        </div>
+    </div>
+
+    <div id="modalPepperoni" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('modalPepperoni')">&times;</span>
+            <h3>Pizza Pepperoni</h3>
+            <img src="https://via.placeholder.com/300" alt="Pizza Pepperoni">
+            <p>Deliciosa combinación de queso mozzarella y pepperoni.</p>
+        </div>
+    </div>
+
+    <div id="modalCuatroQuesos" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('modalCuatroQuesos')">&times;</span>
+            <h3>Pizza Cuatro Quesos</h3>
+            <img src="https://via.placeholder.com/300" alt="Pizza Cuatro Quesos">
+            <p>Mezcla de queso mozzarella, gorgonzola, parmesano y provolone.</p>
+        </div>
+    </div>
+
+    <div id="modalVegetariana" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal('modalVegetariana')">&times;</span>
+            <h3>Pizza Vegetariana</h3>
+            <img src="https://via.placeholder.com/300" alt="Pizza Vegetariana">
+            <p>Pimientos, champiñones, cebolla, y queso mozzarella.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Pizzas Congeladas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="scripts/carrito.js"></script>
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/carrusel.js"></script>
+    <script src="scripts/navbar.js"></script>
+    
+</body>
+</html>

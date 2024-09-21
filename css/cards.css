@@ -1,0 +1,50 @@
+/* Ajustamos el espacio para que el contenido no quede tapado */
+main {
+    margin-top: 0px; /* Aumentamos el margen según la nueva posición del nav */
+    background: #000;
+
+}
+
+
+/* Usamos grid para que las pizzas se adapten automáticamente */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.pizza-card {
+    background-color: rgba(249, 249, 249, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 15px;
+    text-align: center;
+    transition: box-shadow 0.2s ease;
+}
+
+.pizza-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.pizza-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 20px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #218838;
+}
